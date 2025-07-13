@@ -1,0 +1,30 @@
+# AWS Bölgesi seçimi
+# Kullanılabilir bölgeler ve AMI ID'leri:
+# us-east-1    : N. Virginia     - ami-020cba7c55df1f615
+# us-east-2    : Ohio           - ami-0d1b5a8c13042c939
+# us-west-1    : N. California  - ami-014e30c8a36252ae5
+# us-west-2    : Oregon         - ami-05f991c49d264708f
+# ap-south-1   : Mumbai         - ami-0f918f7e67a3323f0
+# ap-southeast-1: Singapore      - ami-02c7683e4ca3ebf58
+# ap-southeast-2: Sydney         - ami-0662f4965dfc70aca
+# ap-northeast-1: Tokyo          - ami-054400ced365b82a0
+# ap-northeast-2: Seoul          - ami-0662f4965dfc70aca
+# ap-northeast-3: Osaka          - ami-0aafffc426e129572
+# ca-central-1 : Central Canada - ami-0c0a551d0459e9d39
+# eu-north-1   : Stockholm      - ami-042b4708b1d05f512
+# eu-west-1    : Ireland        - ami-01f23391a59163da9
+# eu-west-2    : London         - ami-044415bb13eee2391
+# eu-west-3    : Paris          - ami-04ec97dc75ac850b1
+# sa-east-1    : São Paulo      - ami-0a174b8e659123575
+aws_region = "eu-central-1"
+
+# EC2 Instance tipi
+instance_type = "t3.micro"
+
+# SSH Anahtar çifti ayarları
+# Önce aşağıdaki komutla key pair oluşturun:
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/wireguard-key -N ""
+# chmod 400 ~/.ssh/wireguard-key*
+key_name         = "wireguard-key"  # AWS'de kullanılacak anahtar ismi
+public_key_path  = "~/.ssh/wireguard-key.pub"  # Public key dosyasının yolu
+private_key_path = "~/.ssh/wireguard-key"      # Private key dosyasının yolu
