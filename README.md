@@ -46,18 +46,18 @@ aws_secret_access_key = [Secret Key'iniz]
 
 1. Projeyi klonlayın:
    ```bash
-   git clone https://github.com/your-username/aws-wireguard-vpn.git
-   cd aws-wireguard-vpn
+   git clone https://github.com/furkandogmus/vpn-wireguard
+   cd vpn-wireguard
    ```
 
 2. SSH key pair oluşturun:
    ```bash
    # Key pair oluşturma
-   ssh-keygen -t rsa -b 4096 -f ~/.ssh/wireguard-key -N ""
+   ssh-keygen -t rsa -b 4096 -f ~/.ssh/wireguard_key -N ""
    
    # Dosya izinlerini düzenleme
-   chmod 400 ~/.ssh/wireguard-key
-   chmod 400 ~/.ssh/wireguard-key.pub
+   chmod 400 ~/.ssh/wireguard_key
+   chmod 400 ~/.ssh/wireguard_key.pub
    ```
 
 3. `terraform.tfvars.example` dosyasını `terraform.tfvars` olarak kopyalayın ve gerekli değişkenleri ayarlayın:
@@ -100,7 +100,7 @@ Terraform kurulumu tamamlandığında, `client.conf` dosyasında ilk kullanıcı
    - Sunucuya SSH ile bağlanır
    - Yeni bir WireGuard yapılandırması oluşturur
    - Benzersiz IP adresi atar (10.0.0.2'den başlayarak)
-   - Yapılandırmayı `kullanici_adi_vpn_config.txt` dosyasına kaydeder
+   - Yapılandırmayı `kullanici_adi_vpn_config.conf` dosyasına kaydeder
 
 ### Örnek Kullanım
 ```bash
